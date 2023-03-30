@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <!-- js Link  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- jQuery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+
+    <title>Home Page</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container my-5 bg-secondary text-light shadow p-2 text-center rounded-3">
+            <h1 class="display-5" id="heading">Employee Details</h1>
+        </div>
+
+        <!-- post button  -->
+        <div class="container my-5">
+            <a href="#" class="btn btn-primary" id="post-btn">Post data</a>
+        </div>
+
+
+
+        <!-- Show all Data in a Table or Dashboard  -->
+
+        <!-- Dashboard -->
+
+        <div class="container" id="table-div">
+            <table class="table">
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>Position</th>
+                    <th>Company</th>
+                    <th style="width:20% ;">Action</th>
+                </thead>
+                <tbody id="tbody">
+
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+
+        <!-- Post data DIv  -->
+
+        <div class="container p-5 shadow rounded-3" id="post-div" style="width:60% ;">
+            
+                <!-- name input  -->
+                <div class="mb-3">
+                    <input type="text" name="name" id="name" placeholder="Enter Employee Name" class="form-control">
+                </div>
+
+                <!-- Email input  -->
+                <div class="mb-3">
+                    <input type="email" name="email" id="email" placeholder="Enter Employee Email" class="form-control">
+                </div>
+
+                <!-- Contact input  -->
+                <div class="mb-3">
+                    <input type="text" name="contact" id="contact" placeholder="Enter Employee contact"
+                        class="form-control">
+                </div>
+
+
+                <!-- address input  -->
+                <div class="mb-3">
+                    <input type="text" name="address" id="address" placeholder="Enter Employee address"
+                        class="form-control">
+                </div>
+
+
+                <!-- Position dropdwn  -->
+                <div class="mb-3">
+                    <select name="position" id="position" class="form-control">
+                        <option value="developer">Developer</option>
+                        <option value="tester">Tester</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                </div>
+
+                <!-- company input -->
+                <div class="mb-3">
+                    <input type="text" name="company" id="company" placeholder="Enter Company Name"
+                        class="form-control">
+                </div>
+
+                <!-- submit Button  -->
+                <div class="mb-3">
+                    <input type="submit" value="Add Employee" class="btn btn-success" onclick="PostBtn()">
+                </div>
+
+            
+        </div>
+
+
+        <div id="update-div">
+            
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- Axios Link  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
+        integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
